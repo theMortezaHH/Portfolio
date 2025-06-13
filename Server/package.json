@@ -6,7 +6,7 @@
 	"private": true,
 	"license": "UNLICENSED",
 	"scripts": {
-		"build": "copy .env.production .env && nest build && copy .env dist/",
+		"build": "copy .env.production .env && nest build && copy .env dist\\.env",
 		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
 		"start": "nest start",
 		"dev": "copy .env.dev .env && nest start --watch",
@@ -25,6 +25,8 @@
 		"@nestjs/config": "^4.0.2",
 		"@nestjs/core": "^11.0.1",
 		"@nestjs/platform-express": "^11.0.1",
+		"@nestjs/throttler": "^6.4.0",
+		"helmet": "^8.1.0",
 		"reflect-metadata": "^0.2.2",
 		"rxjs": "^7.8.1"
 	},
@@ -73,3 +75,4 @@
 		"testEnvironment": "node"
 	}
 }
+
